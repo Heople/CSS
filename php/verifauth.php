@@ -18,7 +18,7 @@ catch (Exeption $e) {
 
 // On utilise une requête préparée pour sécuriser notre requête contre une injection SQL
 $req = $bdd->prepare("SELECT * FROM logkine WHERE User= ? AND Password= ?");
-$req->execute(array($identifiant, md5($mdp)));
+$req->execute(array($identifiant, $mdp));
 
 
 $result = $req->fetchAll(PDO::FETCH_ASSOC);

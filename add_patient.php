@@ -53,6 +53,8 @@ session_start();
         <div class="info-add-patient2">
           <h3>Ancédédents</h3>
           <textarea id='antépatient' class="add-antecedent"required></textarea>
+          <input placeholder="Identifiant"class="input-add-css compltetion" id='loginpatient' required></input>
+          <input type="password" placeholder="Mot de passe"class="input-add-css compltetion" id='mdppatient' required></input>
         </div>
 
 

@@ -127,7 +127,7 @@ nav{
   font-size: 18px;
   border-right: 1px solid #3a8084;
   z-index: 3;
-  position: sticky;
+  position: fixed;
 }
 
 nav > img {
@@ -186,6 +186,7 @@ header{
   width: 100%;
   height: 120px;
   margin: 0;
+  background-color: white;
 }
 
 header > h1{
@@ -202,6 +203,7 @@ header > h1{
 .container-patient, .prog-container {
   display: inline-block;
   width: calc(100vw - 220px);
+  margin-left: 220px;
 }
 
 .information-container{
@@ -317,7 +319,7 @@ textarea:focus, input:focus{
 .inputs-add-patient-general{
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 40px;
 }
 
 .inputs-add-patient-general h3{
@@ -325,13 +327,24 @@ textarea:focus, input:focus{
   font-size: 15px;
 }
 
-.info-add-patient1, .info-add-patient2{
+.info-add-patient1{
   width: 70%;
   min-width: 815px;
+  max-width: 925px;
   background-color: #EFF1F2;
   padding: 20px;
   margin: 30px 0;
   height: 300px;
+}
+
+.info-add-patient2{
+  width: 70%;
+  min-width: 815px;
+  max-width: 925px;
+  background-color: #EFF1F2;
+  padding: 20px;
+  margin: 30px 0;
+  height: auto;
 }
 
 .flex-add{
@@ -353,9 +366,13 @@ textarea:focus, input:focus{
   margin: 10px 0 0 20px;
   resize: none;
   width: 500px;
-  height: 180px;
+  height: 120px;
   border: 0;
   padding: 10px;
+}
+
+.compltetion{
+  margin: 20px 0 0 20px;
 }
 
 .add-patient{
@@ -380,86 +397,352 @@ textarea:focus, input:focus{
   border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .search-bar-exos{
-  width: 400px;
-  height: 35px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid black;
-  padding-left: 12px;
+.bg-fiche{
+  background-color: #EFF1F2 !important;
 }
 
-
-
-.main-programme{
+.fiche-patient-box{
+  width: calc(100vw - 300px);
+  height: 80%;
+  background-color: white;
+  margin: 30px;
   display: flex;
   flex-direction: row;
-  height: 100%;
-  min-height: 100%;
-  padding-top: 55px;
-  box-sizing: border-box;
 }
 
-.choice-container{
-  width: 23%;
-  min-width: 350px;
-  position: relative;
-  opacity: 0.5;
+.fiche-gauche{
+  width: 200px;
+  border-right: 1px solid #4BB5C1;
+  display: flex;flex-direction: column;
 }
 
-.overlay{
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
+h4{
+  text-align: center;
+}
+
+.photo{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.fiche-exo-box{
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  background-color: #DBFCFC;
+  font-size:  11px;
+  line-height: 47px;
+  font-weight: bold;
+  margin: 5px  auto;
+  padding: 0 5px;
+}
+
+.fiche-mid{
   width: 100%;
-  min-width: 350px;
-  height: 100%;
 }
 
-.choice-container img{
-  margin: 50px 0 0 0 ;
+.header-info{
+  height: 200px;
+  background: linear-gradient(to right, #4BB5C1, #74C5C1);
+  color: white;
+  font-size: 14px;
+  padding: 30px 0 0 50px ;
+}
+
+.header-info > p {
+  margin: 7px;
+}
+
+.nom-prenom{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 20px 0 !important;
+}
+
+.fiche-nom{
+  text-transform: uppercase;
+}
+
+.antecedent-rdv{
+  padding: 20px 20px 0 30px;
+}
+
+.antecedent-rdv > h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.antecedent-area{
+  margin-bottom: 50px;
+}
+
+.add_programme{
+  display: block;
+  background-color: white;
+  border: 1px white;
+  width: 210px;
+  font-size: 18px;
+  margin: 30px auto;
+}
+
+.add_programme i{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #4BB5C1;
+  margin-right: 10px;
+  line-height: 25px;
+}
+
+.add_programme > a {
+  color: #4BB5C1;
+  text-decoration: none;
+}
+
+.feedback-field{
+  display: flex;
+  justify-content: space-between ;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.feedback-field > h3{
+  text-align: center;
+  font-size: 16px;
+  margin: 30px 0;
+}
+
+.main-prog-container{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 900px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px 0 20px 35px;
+}
+
+
+.h1-programme{
+  font-size: 16px;
+}
+
+.titre-prog, .search-bar-exos{
+  width: 400px;
+  height: 30px;
+  padding: 3px 5px;
+  background-color: #DBFCFC;
+  border: 0;
+}
+
+.option-exo{
+  background-color: #DBFCFC;
+}
+
+#frequence, #recurrence{
+  width: 50px;
+  height: 40px;
+  padding: 3px 5px;
+  background-color: #DBFCFC;
+  border: 0;
+  text-align: center;
+}
+
+.information-programme{
   width: 100%;
+}
+
+.affichage-container{
+  width: 350px;
   height: auto;
+  margin: 10px 0;
+  border-left: 1px solid #4BB5C1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.prog-container{
-  width: 50%;
-  margin: 0;
+.affichage{
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.titre-prog{
+  margin: 0 0 20px 0;
+}
+
+.bouton-remove{
+  width: 100%;
+  background-color: #DBFCFC;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.suppr{
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: white;
+  color: black;
+  border: 0;
+}
+
+.exo-affichage{
+  width: 90%;
+  display: block;
+}
+
+.erreur-programme{
+  color: #ef4f64;
+  font-size: 12px;
+}
+
+.description{
+  height: auto;
+  min-height: 100px;
+  text-align: justify;
+}
+.video-programme{
+  margin: 0 auto;
+  width: auto;
+}
+
+.description-infos{
+  width: 70%;
+  min-width: 450px;
+  height: 520px;
+  margin: 40px 0 20px;
+  box-shadow: 0 0 5px 1px #cecece;
+  border-radius: 50px;
   padding: 20px;
-  box-sizing: border-box;
-  border-left: 1px solid;
-  border-right: 1px solid;
-} */
+}
+
+.description-infos h3 {
+  margin: 0 0 10px 0;
+}
+
+.add-exercice{
+  display: block;
+  background-color: white;
+  border: 1px solid #4BB5C1;
+  border-radius: 20px;
+  color: #4BB5C1;
+  width: 170px;
+  height: 30px;
+  padding: 3px 10px;
+  cursor: pointer;
+  margin: 20px 0 0 20%;
+}
+
+.add-programme{
+  display: block;
+  background-color: white;
+  border: 1px solid #4BB5C1;
+  border-radius: 20px;
+  color: #4BB5C1;
+  width: 170px;
+  height: 30px;
+  padding: 3px 10px;
+  cursor: pointer;
+  margin: 50px 0 0 20% !important;
+}
+
+
+.main-prendre-rdv{
+  min-width: 500px;
+  max-width: 750px;
+  height: auto;
+  margin: 40px;
+  background-color: white;
+  padding: 20px 0 20px 35px;
+}
+
+
+.add_rdv{
+  display: block;
+  background-color: white;
+  border: 2px solid #4BB5C1;
+  border-radius: 20px;
+  color: #4BB5C1;
+  width: 175px;
+  height: 35px;
+  font-size: 18px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.main-prendre-rdv input {
+  width: 30%;
+  min-width: 200px;
+  height: 25px;
+  padding: 3px 10px;
+  background-color: #DBFCFC;
+  border: 0;
+  margin: 10px 0 20px 0;
+}
+
+.main-prendre-rdv textarea{
+  width: 50%;
+  min-width: 200px;
+  height: 100px;
+  padding: 3px 10px;
+  background-color: #DBFCFC;
+  border: 0;
+  margin: 10px 0 20px 0;
+  resize: none;
+}
+
+.main-rdv{
+  width: 70%;
+  height: auto;
+  background-color: white;
+  padding: 50px;
+  margin: 20px;
+
+}
+
+.main-rdv h3{
+  margin: 20px 0 7px 0;
+  max-width: 780px;
+  min-width: 600px;
+}
+
+.search-rdv{
+  width: 30%;
+  min-width: 200px;
+  height: 25px;
+  padding: 3px 10px;
+  background-color: #DBFCFC;
+  border: 0;
+  margin: 10px 0 20px 0;
+}
+
+.table{
+  margin: 20px 0 0 0;
+  border: none;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table td{
+  text-align: center;
+}
+
+.table-head-rdv> th{
+  width: 120px;
+  border-bottom: 10px solid white;
+}
+
+.table-space > td{
+  border-top: 1px solid black;
+  height: 35px;
+}
